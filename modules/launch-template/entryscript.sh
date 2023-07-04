@@ -1,3 +1,4 @@
+#cloud-boothook
 #!/bin/bash
 
 # Install Ansible on Ubuntu
