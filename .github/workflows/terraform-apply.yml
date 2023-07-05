@@ -48,6 +48,8 @@ jobs:
     name: 'Release'
     needs: terraform-apply
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
