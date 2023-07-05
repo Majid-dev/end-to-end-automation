@@ -44,7 +44,7 @@ jobs:
           run: ${{ steps.apply-run.outputs.run_id }}
           comment: "Apply Run from GitHub Actions CI ${{ github.sha }}"
 
-   terraform-release:
+  terraform-release:
     name: 'Release'
     needs: terraform-apply
     runs-on: ubuntu-latest
