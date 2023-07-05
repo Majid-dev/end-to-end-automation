@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/Majid-dev/end-to-end-automation/compare/1.2.0...1.2.1) (2023-07-05)
+
+
+### Bug Fixes
+
+* encode user date as base64 ([9d125f0](https://github.com/Majid-dev/end-to-end-automation/commit/9d125f045fb58bab52fd1c8672c731c1bea7f2c8))
+* import user_data commands into launch template module ([90a5de7](https://github.com/Majid-dev/end-to-end-automation/commit/90a5de735643cced68e4308335d6810ee40851cd))
+
 # [1.2.0](https://github.com/Majid-dev/end-to-end-automation/compare/1.1.0...1.2.0) (2023-07-05)
 
 
