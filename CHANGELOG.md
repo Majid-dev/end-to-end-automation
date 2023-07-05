@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Majid-dev/end-to-end-automation/compare/1.1.0...1.2.0) (2023-07-05)
+
+
+### Features
+
+* add load balancer and auto scaling group resources ([3cc4841](https://github.com/Majid-dev/end-to-end-automation/commit/3cc4841c7845d09ebe92be2bcbedebefcf63bc2e))
+
 # [1.1.0](https://github.com/Majid-dev/end-to-end-automation/compare/1.0.0...1.1.0) (2023-07-05)
 
 
