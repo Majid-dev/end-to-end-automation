@@ -17,7 +17,6 @@ module "security-group" {
 module "launch-template" {
   source             = "./modules/launch-template"
   instance_type      = var.instance_type
-  user_data_file     = var.user_data_file
   ami_id             = var.ami_id
   security_group_ids = [module.security-group.webserver-security-group_id]
 }
