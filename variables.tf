@@ -14,7 +14,6 @@ variable "public_subnet_az2_cidr" {}
 
 #launch template variables
 variable "instance_type" {}
-variable "user_data_file" {}
 variable "ami_id" {}
 
 #target group variables

@@ -13,7 +13,6 @@ public_subnet_az2_cidr = "10.0.2.0/24"
 
 #launch template variables
 instance_type  = "t2.micro"
-user_data_file = "./modules/launch-template/entryscript.sh"
 ami_id         = "ami-02162048bb99afe0b"
 
 #target group variables
