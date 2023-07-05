@@ -14,22 +14,22 @@ module "security-group" {
   vpc_id = module.vpc.vpc_id
 }
 
-# module "launch-template" {
-#   source             = "./modules/launch-template"
-#   instance_type      = var.instance_type
-#   user_data_file     = var.user_data_file
-#   security_group_ids = [module.security-group.webserver-security-group_id]
-# }
+module "launch-template" {
+  source             = "./modules/launch-template"
+  instance_type      = var.instance_type
+  user_data_file     = var.user_data_file
+  security_group_ids = [module.security-group.webserver-security-group_id]
+}
 
-# module "target_group" {
-#   source            = "./modules/target-group"
-#   project_name      = var.project_name
-#   vpc_id            = module.vpc.vpc_id
-#   health_check_path = var.health_check_path
-#   tg_port           = var.tg_port
-#   tg_protocol       = var.tg_protocol
-#   tg_target_type    = var.tg_target_type
-# }
+module "target_group" {
+  source            = "./modules/target-group"
+  project_name      = var.project_name
+  vpc_id            = module.vpc.vpc_id
+  health_check_path = var.health_check_path
+  tg_port           = var.tg_port
+  tg_protocol       = var.tg_protocol
+  tg_target_type    = var.tg_target_type
+}
 
 # module "alb" {
 #   source                 = "./modules/alb"
