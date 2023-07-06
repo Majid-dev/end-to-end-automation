@@ -10,12 +10,12 @@ data "aws_ami" "my_ami" {
 }
 data "template_file" "test" {
   template = <<EOF
-  #!/bin/bash
-  git clone https://github.com/Majid-dev/install-jenkins.git
-  cd install-jenkins
-  ansible-playbook install-jenkins.yml
-  ansible-playbook configure-jenkins.yml
-  EOF
+#!/bin/bash
+git clone https://github.com/Majid-dev/install-jenkins.git
+cd install-jenkins
+ansible-playbook install-jenkins.yml
+ansible-playbook configure-jenkins.yml
+EOF
 }
 resource "aws_launch_template" "template" {
   name_prefix   = "launch_template"
