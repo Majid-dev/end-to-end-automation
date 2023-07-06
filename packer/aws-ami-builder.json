@@ -27,11 +27,14 @@
       {
         "type": "shell",
         "inline": [
-        "sudo apt update",
+        "sudo apt-get update",
+        "sudo apt-get upgrade -y",
+        "sudo apt-add-repository ppa:ansible/ansible",
+        "sudo apt-get update",
         "sudo apt install ansible -y",
         "ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa",
         "cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys",
-        "ssh -o StrictHostKeyChecking=no localhost"
+        "ssh -o StrictHostKeyChecking=no localhost echo 'Successfully connect via SSH'"
       ]
       }
     ],
