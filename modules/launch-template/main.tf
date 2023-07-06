@@ -10,7 +10,9 @@ data "aws_ami" "my_ami" {
 }
 data "template_file" "test" {
   template = <<EOF
-#!/bin/bash
+#!/usr/bin/bash
+sudo su ubuntu
+cd /home/ubuntu
 git clone https://github.com/Majid-dev/install-jenkins.git
 cd install-jenkins
 ansible-playbook install-jenkins.yml
