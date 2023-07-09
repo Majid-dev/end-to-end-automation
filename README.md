@@ -1,12 +1,12 @@
 # end-to-end-automation
-This repository contains an end-to-end automation project that deploys on AWS using Terraform, Packer, Ansible, and Jenkins. The project creates an AMI image using Packer with Ansible installed on it and then Terraform deploy required resources on AWS to host Jenkins Server. During initializing EC2 instance, required Ansible playbook files for Jenkins Installation and Configuration is cloned from [Install-jenkins](https://github.com/Majid-dev/install-jenkins) repository and executed.
+This repository contains an end-to-end automation project that deploys on AWS using Terraform, Packer, Ansible, and Jenkins. The project creates an AMI image using Packer with Ansible installed on it and then Terraform deploy required resources on AWS to host Jenkins Server. During initializing EC2 instance, required Ansible playbook files for Jenkins Installation and Configuration is cloned from [Install-jenkins](https://github.com/Majid-dev/install-jenkins) repository and executed by Ansible.
 
 ## Project Structure
 - The `packer` directory contains the Packer configuration file (`aws-ami-builder.json`) to create the custom AMI image.
 
 - The `modules` directory contains the Terraform modules (`alb, asg, launch-template, security-group, target-group, vpc`) required for provisioning whole infrastructure.
 
-- The `.github` directory contains the Github Action files (`terraform-plan.yml` , `terraform-apply.yml`) that defines the pipeline for the infrastructure.
+- The `.github` directory contains the Github Action files (`terraform-plan.yml` , `terraform-apply.yml`) that defines the pipeline for the infrastructure deployment.
 
 ## Prerequisites
 
@@ -16,8 +16,6 @@ Before running the project, ensure that you have the following prerequisites:
 - Terraform cloud account to store state file and deployment automation.
 
 - Packer installed on your local machine.
-
-
 
 ## Deployment Process
 To deploy the project on AWS, follow these steps:
@@ -31,6 +29,7 @@ To deploy the project on AWS, follow these steps:
     packer build aws-ami-builder.json
     ```
     This will create an AMI with Ansible installed and necessary dependencies.
+    
 2. Once the AMI creation is complete, Navigate to the root directory and run the following Terraform commands to provision the infrastructure:
     ```bash
     terraform init
