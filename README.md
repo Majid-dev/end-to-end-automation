@@ -1,3 +1,8 @@
+![Terraform Apply](https://github.com/Majid-dev/end-to-end-automation/actions/workflows/terraform-apply.yml/badge.svg?branch=main)
+![License](https://img.shields.io/github/license/Majid-dev/end-to-end-automation)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/majid-dev/end-to-end-automation)
+
+
 # end-to-end-automation
 This repository contains an end-to-end automation project that deploys on AWS using Terraform, Packer, Ansible, and Jenkins. The project creates an AMI image using Packer with Ansible installed on it and then Terraform deploy required resources on AWS to host Jenkins Server. During initializing EC2 instance, required Ansible playbook files for Jenkins Installation and Configuration is cloned from [Install-jenkins](https://github.com/Majid-dev/install-jenkins) repository and executed by Ansible.
 
@@ -29,7 +34,7 @@ To deploy the project on AWS, follow these steps:
     packer build aws-ami-builder.json
     ```
     This will create an AMI with Ansible installed and necessary dependencies.
-    
+
 2. Once the AMI creation is complete, Navigate to the root directory and run the following Terraform commands to provision the infrastructure:
     ```bash
     terraform init
@@ -38,7 +43,7 @@ To deploy the project on AWS, follow these steps:
     ```
     This will deploy all required resources on AWS to host Jenkins server and any other necessary configurations. Refer to the [Install-jenkins](https://github.com/Majid-dev/install-jenkins) repository documentation for setting up and configuring Jenkins jobs.
 ## Note:
- `You can creat your own repository for jenkins installation and configuration playbooks and place its link in launch-template module.`
+ > You can creat your own repository for jenkins installation and configuration playbooks and place its link in launch-template module.
 
 ## Contributing
 If you'd like to contribute to this project, please follow these guidelines:
@@ -47,6 +52,8 @@ If you'd like to contribute to this project, please follow these guidelines:
 3. Submit a pull request, explaining the purpose and details of your contribution.
 ## License
 This project is licensed under the MIT License.
+
+
 
 
 
