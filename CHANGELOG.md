@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/Majid-dev/end-to-end-automation/compare/1.2.1...1.3.0) (2023-07-09)
+
+
+### Bug Fixes
+
+* add command to switch to ubuntu user in user_data argument ([e6f220d](https://github.com/Majid-dev/end-to-end-automation/commit/e6f220df7c584458d6d8b7edc8f25a99bb115815))
+
+
+### Features
+
+* Update README.md file ([816f8e3](https://github.com/Majid-dev/end-to-end-automation/commit/816f8e39cd70c2ff6aa2ff9d20ad645569657dc7))
+
 ## [1.2.1](https://github.com/Majid-dev/end-to-end-automation/compare/1.2.0...1.2.1) (2023-07-05)
 
 
